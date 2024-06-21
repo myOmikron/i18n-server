@@ -1,0 +1,22 @@
+[package]
+name = "i18n-server"
+version = "0.1.0"
+edition = "2021"
+license = "MPL-2"
+description = "A helper server for translating of react projects"
+
+[dependencies]
+# Webframework
+axum = { version = "~0.7", features = ["macros"] }
+
+# Serialization
+serde = { version = "~1", features = ["derive"] }
+toml = { version = "~0.8" }
+serde_json = { version = "~1" }
+
+# Logging
+tracing = { version = "~0.1" }
+tracing-subscriber = { version = "~0.3" }
+
+# Async runtime
+tokio = { version = ">=1.23.1", features = ["macros", "rt-multi-thread"] }
